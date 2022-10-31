@@ -1,0 +1,74 @@
+[
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$390000$ACVASx9KkMXkYL2dWsuvU3$pSmKGLC5HDuR3+vEcfvwjwsl3wh+WNUYNy77Etgarm4=",
+      "last_login": "2022-10-07T21:13:37.826Z",
+      "is_superuser": true,
+      "username": "mak@mk.com",
+      "first_name": "X",
+      "last_name": "",
+      "email": "mak@mk.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-10-04T13:12:15Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+
+  {
+    "model": "store.product",
+    "pk": 9,
+    "fields": {
+      "name": "RFID ",
+      "image": "rfid.jpg",
+      "price": "3.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 10,
+    "fields": {
+      "name": "Mac",
+      "image": "mac.png",
+      "price": "700.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 11,
+    "fields": {
+      "name": "Mi Band 4",
+      "image": "miband.png",
+      "price": "200.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 12,
+    "fields": {
+      "name": "King Stone Memory",
+      "image": "kingstone.jpg",
+      "price": "20.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 13,
+    "fields": {
+      "name": "Asus Monitor",
+      "image": "asus.jpg",
+      "price": "500.00"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 14,
+    "fields": {
+      "name": "Usb Wifi Adapter",
+      "image": "Usb_Wifi_Adpater.jpg",
+      "price": "4.00"
+    }
+  }
+]

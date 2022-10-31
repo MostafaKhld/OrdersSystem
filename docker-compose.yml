@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  db:
+    restart: always
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_NAME=db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=db
+    networks:
+      - db-net
+  django:
+    build: ./backend
+    command: bash -c " python manage.py migrate && python manage.py loaddata dump.json && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./backend:/app/backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - db-net
+  frontend:
+    restart: always
+    command: npm start
+    build: ./frontend
+    volumes:
+      - ./frontend:/app/frontend
+      - node-modules:/app/frontend/node_modules
+    ports:
+      - "3000:3000"
+
+volumes:
+  node-modules:
+  db:
+
+
+networks:
+  db-net:
+    driver: bridge
